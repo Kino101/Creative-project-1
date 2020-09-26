@@ -58,6 +58,7 @@ body {
   margin: 5px;
   margin-bottom: 20px;
   width: 50%;
+  min-width: 250px;
 }
 
 
@@ -117,6 +118,7 @@ body {
   height: auto;
   text-align: left;
   font-size: 17px;
+  padding-left: 25px;
 }
 
 /* main image */
