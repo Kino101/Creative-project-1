@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/shelterStyle.css" />
-  <title>About</title>
+  <title>Adopt A Cat</title>
 </head>
 
 <body>
@@ -19,32 +19,56 @@
         <li class="nav-item">
           <a class="nav-link" href="/index.html">Home<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="/pages/about.html">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/adopt.html">Adopt</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="/pages/adopt.html">Adopt > Cats</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <div class='content'>
-    <h1>Kino's Shelter</h1>
-    <div class='main-img'>
-      <img src='/images/About/shelterFront.jpg' alt="Front of shelter building"/>
+  <div id="overlay" onclick="off()">
+    <div class="adoptPopUp">
+      <p>
+        To adopt this cat please send an email to the address bellow.
+      </p>
+      <p>
+        <strong>Email: KinosShelter@gmail.com</storng>
+      </p>
     </div>
-    <p>Open since 2010</p>
-    <div class='content-img-and-text about-page'>
-      <div class='img-text'>
-        <h5>Three Priorities of Kino's Shelter</h5>
-        <ol class="orderedList">
-          <li>Providing a safe and comfortable <br/>enviroment</li>
-          <li>Administrating medical care and <br/>promoting health</li>
-          <li>Maintaining mental stimulation</li>
-        </ol>
-      </div>
-      <img src="/images/About/dogHealth.jpg" alt="A dog who wants a home"/>
+  </div>
+
+  <div class='content'>
+    <h1>Adopt A Feline Friend Today</h1>
+    <p>All cats bellow are available for adoption.</p>
+    <ul class='masonry'>
+      <li class='item-masonry' onclick="on()">
+        <img src="/images/Adopt/catBlackWhite.jpg" onclick="on()"/>
+      </li>
+      <li class='item-masonry' onclick="on()">
+        <img src="/images/Adopt/catCalico.jpg"/>
+      </li>
+      <li class='item-masonry' onclick="on()">
+        <img src="/images/Adopt/catFluffy.jpg"/>
+      </li>
+      <li class='item-masonry' onclick="on()">
+        <img src="/images/Adopt/catPost.jpg"/>
+      </li>
+      <li class='item-masonry' onclick="on()">
+        <img src="/images/Adopt/catWhite.jpg"/>
+      </li>
+      <li class='item-masonry' onclick="on()">
+        <img src="/images/Adopt/catOrange.jpg"/>
+      </li>
+      <li class='item-masonry' onclick="on()">
+        <img src="/images/Adopt/catGray.jpg"/>
+      </li>
+      <li class='item-masonry' onclick="on()">
+        <img src="/images/Adopt/cat.jpg"/>
+      </li>
+    </ul>
   </div>
 
   <div class="footer">
@@ -53,6 +77,15 @@
     </div>
   </div>
 
+
+  <script>
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
