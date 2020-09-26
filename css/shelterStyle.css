@@ -4,7 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: #FFFFFE;
   font-family: 'Lora', serif;
 }
@@ -39,9 +46,10 @@ body {
   height: auto;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.content h1 {
+.content > h1,h2 {
   text-align: center;
   margin: 10px;
 }
@@ -49,7 +57,9 @@ body {
 .content > p {
   margin: 5px;
   margin-bottom: 20px;
+  width: 50%;
 }
+
 
 .content-img-and-text {
   display: flex;
@@ -60,6 +70,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  margin-bottom: 10px;
   background-color: #20D6D5;
 }
 
@@ -78,7 +89,6 @@ body {
   width: 375px;
   text-align: center;
   margin: 20px;
-  /*margin-bottom: 30px;*/
   padding-top: 20px;
   padding-bottom: 15px;
   background-color: #FAC593;
@@ -96,15 +106,17 @@ body {
 .about-page > img {
   height: auto;
   width: 40%;
+  min-width: 250px;
 }
 /* //About page modifications */
 
-.orderedList {
+.list {
   display: flex;
   flex-direction: column;
   width: auto;
   height: auto;
   text-align: left;
+  font-size: 17px;
 }
 
 /* main image */
@@ -128,7 +140,6 @@ body {
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-bottom: 25px;
 }
 
 .image-link {
@@ -178,6 +189,14 @@ body {
 }
 /* //Adoption overlay */
 
+/* adoption info */
+.adoptInfo {
+  font-style: italic;
+  margin-top: 5px;
+  font-weight: normal;
+}
+/* //adoption info */
+
 /* Masonry */
 
 .masonry {
@@ -187,9 +206,12 @@ body {
 }
 
 .item-masonry {
-  box-sizing: content-box;
+  break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
   margin: 0 0 1.5em;
-  max-width: 250px;
   padding: 12px;
   background-color: #20D6D5;
   border-radius: 15px;
@@ -207,7 +229,17 @@ body {
 /* Masonry on large screens */
 @media only screen and (min-width: 1024px) {
   .masonry {
-    column-count: 3;
+    column-count: 2;
+    column-gap: 2.5em;
+  }
+
+  .item-masonry {
+    margin-bottom: 2.5em;
+  }
+
+  .item-masonry img {
+    height: auto;
+    width: 400px;
   }
 }
 
@@ -232,8 +264,13 @@ body {
   justify-content: center;
 }
 
+.footer {
+  margin-top: auto;
+}
+
 .footer .footer-bottom {
   font-size: 1em;
+  font-weight: normal;
   text-align: center;
   color: #FFFFFE;
   bottom: 0px;
